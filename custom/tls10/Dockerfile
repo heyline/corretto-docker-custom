@@ -8,4 +8,3 @@ ARG customize_DisabledAlgorithms="jdk.tls.disabledAlgorithms=SSLv3, RC4, DES, MD
 
 RUN sed -i "s/$original_DisabledAlgorithms/$customize_DisabledAlgorithms/g" ${JAVA_HOME}/conf/security/java.security \
     && cat ${JAVA_HOME}/conf/security/java.security
-
